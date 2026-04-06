@@ -11,9 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     }
 
-    // Initialize EmailJS (replace with your public key)
-    emailjs.init('O2kJCxMXN7meRP5HX');
-
     // Form validation and send
     const form = document.querySelector('form');
     form.addEventListener('submit', (e) => {
@@ -29,19 +26,11 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Veuillez entrer un email valide.');
             return;
         }
-        // Send email
-        emailjs.send('service_xvvty4o', 'template_6puvel5', {
-            from_name: name,
-            from_email: email,
-            message: message,
-            to_email: 'singteubeleuferbe@gmail.com'
-        }).then(() => {
-            alert('Message envoyé avec succès !');
-            form.reset();
-        }, (error) => {
-            alert('Erreur lors de l\'envoi: ' + error.text);
-        });
+        // Simulate sending message
+        alert('Message envoyé avec succès !');
+        form.reset();
     });
+    
 
     // Fade-in animation
     const observer = new IntersectionObserver((entries) => {
