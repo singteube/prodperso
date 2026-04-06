@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio de Singteube Leuferbe, développeur web freelance spécialisé en Django, Python, HTML, CSS, MySQL et installation réseau informatique. Découvrez mes projets et services.">
+    <title>Accueil - Singteube Leuferbe</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .carousel-image {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .carousel-image.active {
+            display: block;
+        }
+        .carousel-container {
+            overflow: hidden;
+        }
+        .carousel-track {
+            display: flex;
+            animation: scroll 10s linear infinite;
+        }
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        /* Responsive adjustments for carousel */
+        @media (max-width: 768px) {
+            .carousel-track {
+                animation-duration: 15s;
+            }
+        }
+
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 text-white min-h-screen overflow-x-hidden">
+    <nav class="bg-gray-800 shadow-md py-4">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-white">Singteube Leuferbe</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#about" class="text-gray-300 hover:text-white transition">À propos</a></li>
+                <li><a href="#experience" class="text-gray-300 hover:text-white transition">Expérience</a></li>
+                <li><a href="#services" class="text-gray-300 hover:text-white transition">Services</a></li>
+                <li><a href="#projects" class="text-gray-300 hover:text-white transition">Projets</a></li>
+                <li><a href="#testimonials" class="text-gray-300 hover:text-white transition">Témoignages</a></li>
+                <li><a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="relative text-white h-screen flex items-center justify-center text-center overflow-hidden">
+        <div class="carousel absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800" alt="Coding" class="carousel-image w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800" alt="Web Dev" class="carousel-image w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=800" alt="Network" class="carousel-image w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 flex flex-col items-center bg-black bg-opacity-50 p-8 rounded">
+            <h1 class="text-5xl font-bold mb-4">Singteube Leuferbe</h1>
+            <p class="text-2xl mb-6">Passionné du numérique</p>
+            <p class="text-lg mb-8">Freelance en développement web et installation réseau</p>
+            <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded">Me contacter</a>
+        </div>
+    </header>
+    
+    <section id="about" class="py-16 px-4 bg-gray-800 text-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-semibold mb-12 text-center"><i class="fas fa-user mr-2"></i>À propos de moi</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <img src="styles/images/IMG_5667.jpeg" alt="Singteube Leuferbe" class="rounded-full w-48 h-48 mb-6 md:mb-0 md:mr-8">
+                <div class="text-center md:text-left">
+                    <p class="text-lg leading-relaxed mb-4">Je suis un développeur web freelance passionné, spécialisé dans la création d'applications web sur mesure. Avec une expertise en Django/Python, HTML, CSS, MySQL et installation réseau informatique, j'aide les entreprises et particuliers à digitaliser leurs projets.</p>
+                    <a href="#" download class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded">Télécharger CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-16 px-4 bg-gray-700 text-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-semibold mb-12 text-center"><i class="fas fa-briefcase mr-2"></i>Expérience & Éducation</h2>
+            <div class="space-y-8">
+                <div class="flex items-start">
+                    <div class="bg-blue-600 rounded-full p-3 mr-4">
+                        <i class="fas fa-graduation-cap text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold">Licence en Informatique</h3>
+                        <p class="text-gray-300">Université Polytechnique de Mongo, 2022-2025</p>
+                        <p>Spécialisation en Développement Web, Logiciel et Réseaux.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <div class="bg-blue-600 rounded-full p-3 mr-4">
+                        <i class="fas fa-briefcase text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold">Freelance Développeur Web</h3>
+                        <p class="text-gray-300">Depuis 2023</p>
+                        <p>Réalisation de projets pour diverses entreprises, installation de réseaux informatiques.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="services" class="py-16 px-4 bg-gray-800 text-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-semibold mb-12 text-center"><i class="fas fa-tools mr-2"></i>Mes Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-code text-blue-400 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Développement Web</h3>
+                    <p>Création d'applications web robustes avec Django et Python.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-palette text-green-400 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Frontend</h3>
+                    <p>Design moderne et responsive avec HTML, CSS et frameworks.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-database text-yellow-400 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Base de Données</h3>
+                    <p>Gestion et optimisation de bases de données MySQL.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-network-wired text-purple-400 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Réseau Informatique</h3>
+                    <p>Installation et configuration de réseaux informatiques.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-cogs text-red-400 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Applications Sur Mesure</h3>
+                    <p>Développement d'applications personnalisées selon vos besoins.</p>
+                </div>
+                <div class="bg-gray-700 p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-user-tie text-indigo-400 text-3xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-4">Conseil Technique</h3>
+                    <p>Accompagnement et conseils pour vos projets numériques.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="projects" class="py-16 px-4 bg-gray-800 text-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-semibold mb-12 text-center"><i class="fas fa-project-diagram mr-2"></i>Mes Projets</h2>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-md flex-shrink-0 w-80 mx-4">
+                        <h3 class="text-xl font-semibold mb-4">Site E-commerce</h3>
+                        <p class="mb-4">Développement d'une plateforme e-commerce avec Django.</p>
+                        <a href="#" class="text-blue-400 hover:underline">Voir le projet</a>
+                    </div>
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-md flex-shrink-0 w-80 mx-4">
+                        <h3 class="text-xl font-semibold mb-4">Application de Gestion</h3>
+                        <p class="mb-4">Application web pour la gestion d'inventaire.</p>
+                        <a href="#" class="text-blue-400 hover:underline">Voir le projet</a>
+                    </div>
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-md flex-shrink-0 w-80 mx-4">
+                        <h3 class="text-xl font-semibold mb-4">Installation Réseau</h3>
+                        <p class="mb-4">Configuration réseau pour une entreprise locale.</p>
+                        <a href="#" class="text-blue-400 hover:underline">Voir le projet</a>
+                    </div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-md flex-shrink-0 w-80 mx-4">
+                        <h3 class="text-xl font-semibold mb-4">Site E-commerce</h3>
+                        <p class="mb-4">Développement d'une plateforme e-commerce avec Django.</p>
+                        <a href="#" class="text-blue-400 hover:underline">Voir le projet</a>
+                    </div>
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-md flex-shrink-0 w-80 mx-4">
+                        <h3 class="text-xl font-semibold mb-4">Application de Gestion</h3>
+                        <p class="mb-4">Application web pour la gestion d'inventaire.</p>
+                        <a href="#" class="text-blue-400 hover:underline">Voir le projet</a>
+                    </div>
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-md flex-shrink-0 w-80 mx-4">
+                        <h3 class="text-xl font-semibold mb-4">Installation Réseau</h3>
+                        <p class="mb-4">Configuration réseau pour une entreprise locale.</p>
+                        <a href="#" class="text-blue-400 hover:underline">Voir le projet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="testimonials" class="py-16 px-4 bg-gray-800 text-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-semibold mb-12 text-center"><i class="fas fa-comments mr-2"></i>Témoignages</h2>
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-md flex-shrink-0 w-80 mx-4">
+                        <p class="mb-4">"Singteube a réalisé un excellent travail sur notre site web. Professionnel et réactif."</p>
+                        <p class="font-semibold">- Client 1</p>
+                    </div>
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-md flex-shrink-0 w-80 mx-4">
+                        <p class="mb-4">"Installation réseau parfaite, tout fonctionne impeccablement."</p>
+                        <p class="font-semibold">- Client 2</p>
+                    </div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-md flex-shrink-0 w-80 mx-4">
+                        <p class="mb-4">"Singteube a réalisé un excellent travail sur notre site web. Professionnel et réactif."</p>
+                        <p class="font-semibold">- Client 1</p>
+                    </div>
+                    <div class="bg-gray-700 p-6 rounded-lg shadow-md flex-shrink-0 w-80 mx-4">
+                        <p class="mb-4">"Installation réseau parfaite, tout fonctionne impeccablement."</p>
+                        <p class="font-semibold">- Client 2</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="py-16 px-4 bg-gray-800 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-semibold mb-6"><i class="fas fa-envelope mr-2"></i>Contactez-moi</h2>
+            <p class="text-lg mb-8">Prêt à donner vie à votre projet ? Contactez-moi !</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Informations</h3>
+                    <p>Email: singteubeleuferbe@gmail.com</p>
+                    <p>Téléphone: +235 63 28 18 80</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Envoyez un message</h3>
+                    <form class="text-left">
+                        <input type="text" placeholder="Nom" class="w-full p-3 mb-4 border border-gray-600 rounded bg-gray-700 text-white placeholder-gray-400">
+                        <input type="email" placeholder="Email" class="w-full p-3 mb-4 border border-gray-600 rounded bg-gray-700 text-white placeholder-gray-400">
+                        <textarea placeholder="Message" class="w-full p-3 mb-4 border border-gray-600 rounded bg-gray-700 text-white placeholder-gray-400" rows="4"></textarea>
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <div class="flex justify-center space-x-6 mb-4">
+            <a href="https://linkedin.com/in/singteube" target="_blank" class="text-gray-300 hover:text-white text-2xl"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/singteube" target="_blank" class="text-gray-300 hover:text-white text-2xl"><i class="fab fa-github"></i></a>
+            <a href="mailto:singteubeleuferbe@gmail.com" class="text-gray-300 hover:text-white text-2xl"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2026 Singteube Leuferbe. Tous droits réservés.</p>
+    </footer>
+    
+    <script src="styles/js/script.js"></script>
+</body>
+</html>
